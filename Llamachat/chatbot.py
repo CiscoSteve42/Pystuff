@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 #!/usr/bin/env python3
 
->>>>>>> 8006cbd3e68981dd5a4f08ccc85083b062353f64
 import subprocess, sys
 try:
     import ollama
