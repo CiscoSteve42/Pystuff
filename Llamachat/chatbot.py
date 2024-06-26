@@ -1,5 +1,6 @@
-import subprocess
-import sys
+#!/usr/bin/env python3
+
+import subprocess, sys
 try:
     import ollama
 except ImportError:
