@@ -1,5 +1,4 @@
-import subprocess
-import sys
+import subprocess, sys
 try:
     import ollama
 except ImportError:
