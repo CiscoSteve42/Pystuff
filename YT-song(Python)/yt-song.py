@@ -1,4 +1,4 @@
-import yt_dlp, os
+import yt_dlp
 
 def download_audio(url, file_name):
     ydl_opts = {
