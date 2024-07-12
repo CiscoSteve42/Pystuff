@@ -5,9 +5,9 @@ from sys import exit
 
 
 def display_score():
-    current_time = pygame.time.get_ticks() - start_time
-    score_surf = test_font.render(f'{current_time}',False,'Yellow')
-    score_rect = score_surf.get_rect(center = (1100, 50))
+    current_time = int(pygame.time.get_ticks() / 10) - start_time
+    score_surf = test_font.render(f'Score: {current_time}',False,'Yellow')
+    score_rect = score_surf.get_rect(center = (1060, 40))
     screen.blit(score_surf,score_rect)
 
 pygame.init()
@@ -79,7 +79,7 @@ while True:
             tux_rect.left = 50
             pygame.mixer.music.play(-1)
             snail_speed = 4
-            start_time = pygame.time.get_ticks()
+            start_time = int(pygame.time.get_ticks() /10)
 
     pygame.display.update()
     clock.tick(fps)
