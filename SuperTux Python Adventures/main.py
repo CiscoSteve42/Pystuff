@@ -20,6 +20,7 @@ text_surface = test_font.render('Super Tux: The Python Adventures', False, 'Yell
 
 snail_surface = pygame.image.load('images/snail/snail1.png').convert_alpha()
 snail_rect = snail_surface.get_rect(bottomright = (1000,750))
+snail_speed = 4
 
 tux_surface = pygame.image.load('images/Tux/big/idle-0.png').convert_alpha()
 tux_rect = tux_surface.get_rect(midbottom = (50,750))
@@ -35,8 +36,10 @@ while True:
         screen.blit(bg_surface,(0,0))
         screen.blit(text_surface,(250,150))
 
-        snail_rect.x -= 4
-        if snail_rect.right <= 0: snail_rect.left = 1200
+        snail_rect.x -= snail_speed
+        if snail_rect.right <= 0: 
+            snail_rect.left = 1200
+            snail_speed += 1
         screen.blit(snail_surface,snail_rect)
 
         tux_grav += 1
@@ -67,6 +70,8 @@ while True:
             snail_rect.left = 1200
             tux_rect.left = 50
             pygame.mixer.music.play(-1)
+            snail_speed = 4
 
     pygame.display.update()
     clock.tick(fps)
+
