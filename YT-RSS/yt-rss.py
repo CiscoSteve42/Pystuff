@@ -2,6 +2,15 @@
 
 import requests, re, feedparser
 
+print('''
+    __   _______     ____  ____ ____
+    \ \ / |_   _|   |  _ \/ ___/ ___|
+     \ V /  | |_____| |_) \___ \___ \\
+      | |   | |_____|  _ < ___) ___) |
+      |_|   |_|     |_| \_|____|____/
+      --------------------------------
+ YouTube RSS Link extractor by CiscoSteve42
+''')
 def extract_channel_rss(url):
     response = requests.get(url)
     html_content = response.text
