@@ -30,7 +30,7 @@ def parse_rss_feed(rss_url):
     return channel_title, entries
 
 if __name__ == "__main__":
-    youtube_url = input('Enter a a YouTube URL to get rss info from:\n')
+    youtube_url = input('Enter a YouTube URL to get rss info from:\n')
 
     channel_rss_url = extract_channel_rss(youtube_url)
     if channel_rss_url:
